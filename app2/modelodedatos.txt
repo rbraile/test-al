@@ -1,0 +1,32 @@
+db.hotels.save({ "name" : "Hotel Nuevo Boston", "stars" : 2, "price" : {"amount": 1118, "amountWithDiscount": 861, "discountPercentage":23, "taxes": true, "currency": "ARS"}, "paymentType": ["Pagá en cuotas"], gallery: ["public/static/images/hotel1.jpg", "public/static/images/hotel2.jpg", "public/static/images/hotel3.jpg"], "amenities":["bar", "pool","business","checkin", "coffee", "gym"], "mealPlan": "Solo la habitación" });
+
+db.hotels.save({ "name" : "Petit Palace San Bernardo", "stars" : 4, "price" : {"amount": 2145, "taxes": true, "currency": "ARS"}, "paymentType": ["Pagá en destino"], gallery: ["public/static/images/hotel1.jpg", "public/static/images/hotel2.jpg", "public/static/images/hotel3.jpg"], "amenities":["pool", "business","checkin", "cleaning", "wifi", "tv"], "mealPlan": "Solo la habitación" });
+
+db.hotels.save({ "name" : "Hotel Emperador", "stars" : 3, "price" : {"amount": 1596, "taxes": true, "currency": "ARS"}, "paymentType": ["Pagá en destino","Pagá en cuotas"], gallery: ["public/static/images/hotel1.jpg", "public/static/images/hotel2.jpg", "public/static/images/hotel3.jpg"], "amenities":["bar", "pool", "checkin", "coffee", "gym", "cleaning"], "mealPlan": "Solo la habitación"});
+
+
+
+public/static/images/hotel3.jpg
+
+db.hotels.remove({"name" : "Hotel Nuevo Boston"});
+db.hotels.remove({"name" : "Petit Palace San Bernardo"});
+db.hotels.remove({"name" : "Hotel Emperador"});
+
+
+result = db.restaurants.update_one(
+    {"name": "Juni"},
+    {
+        "$set": {
+            "cuisine": "American (New)"
+        },
+        "$currentDate": {"lastModified": True}
+    }
+)
+
+
+
+
+
+
+
+

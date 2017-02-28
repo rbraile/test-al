@@ -1,0 +1,576 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: 'Roboto', sans-serif;
+	background: #f4f4f4;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input[type='text'] { 
+	border: 1px solid ;
+    border-color: #CCC;
+    border-top-color: #777;
+}
+
+a:hover {
+	text-decoration: none; 
+}
+
+header {
+	background: #0c3c7c;
+}
+
+.arrow-blue {
+	background: url('../images/arrow-blue.jpg') no-repeat;
+	display: block;
+	width: 10px;
+	height: 5px;
+}
+
+.arrow-blue.bottom {
+	-ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+header ul {
+	list-style: none;
+}
+
+.header-top {
+	padding: 0 20px;	
+}
+
+.header-top .logo {
+	display: block;
+	float: left;
+	padding: 16px 0;
+}
+
+.header-top .navigation-top {
+	float: right;
+	padding-top: 24px;
+}
+
+.header-top .navigation-top li {
+	display: inline-block;
+	border-right: 1px solid #fff;
+	padding: 0 16px;
+}
+
+.header-top .navigation-top li:last-child {
+	border-right: none;
+}
+
+.header-top .navigation-top li:first-child a {
+	background: url('../images/ic-user.jpg') 0 2px no-repeat;
+	padding-left: 16px;
+}
+
+.header-top .navigation-top li a {
+	color: #fff;
+	font-size: 14px;
+}
+
+nav {
+	border-top: 1px solid #5f82a7;
+	border-bottom: 1px solid #9eb2ca;
+	background: #406692;
+	text-align: center;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	padding: 10px 15px;
+	display: block;
+}
+
+nav ul li a:hover {
+	background: #0c3c7c;
+	color: #fff;
+}
+
+nav ul li ul {
+	display: none;
+}
+
+.container-general {
+	margin: 0 20px;
+}
+
+.search-options {
+	border: 1px solid #ccc;
+	padding: 15px;
+	color: #444;
+}
+
+.search-options h4 {
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.search-options ul {
+	float: left;
+}
+
+.edit-search {
+	float: left;
+}
+
+.edit-search .arrow-blue {
+	display: none;
+}
+
+.breadcrumb {
+	background: none;
+	margin: 14px 0 0;
+	padding-left: 0;
+}
+
+.breadcrumb li {
+	font-size: 11px;
+}
+
+.breadcrumb li a {
+	color: #157ab1;
+	cursor: pointer;
+}
+
+.short {
+	text-align: right;
+    margin: 6px 0;
+}
+
+.short label {
+	font-size: 12px;
+	line-height: 24px;
+}
+
+.short select {
+	background: #fff;
+    height: 24px;
+    vertical-align: top;
+    font-size: 12px;
+    padding-left: 8px;
+    border-radius: 2px;
+    box-sizing: border-box;
+	border: 1px solid ;
+    border-color: #CCC;
+    border-top-color: #777;
+}
+
+.search-options ul li {
+	display: inline-block;
+	padding-right: 20px;
+	font-size: 14px;
+}
+
+.sidebar {
+	width: 20%;
+	float: left;
+	margin-top: 36px;
+}
+
+.sidebar .filtros .link-filtro {
+	position: relative;
+	display: none;
+}
+
+.arrow-blue {
+	position: absolute;
+	right: 2px;
+	top: 5px;
+}
+
+.sidebar .mapa img {
+	width: 100%;
+	float: left;
+}
+
+.sidebar .mapa a {
+	display: block;
+	width: 100%;
+	float: left;
+	text-align: center;
+	background: #fff;
+	padding: 8px 0;
+	font-size: 14px; 
+}
+
+.sidebar .filter-title {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 16px 0 12px;
+}
+
+.main-content {
+	float: right;
+	width: 78%;
+}
+
+.box {
+	color: #1a99df;
+	background: #fff;
+	padding: 10px;
+	box-shadow: 0px 1px 3px 0px rgba(119, 119, 199, 0.3);
+	margin-bottom: 3px;
+}
+
+.box a {
+	display: block;
+	position: relative;
+}
+	
+.search-by-name .glyphicon-search {
+	font-size: 12px;
+	margin-right: 8px;
+}
+
+.search-by-name input[type='text'] { 
+	width: 60%;
+	height: 32px;
+	line-height: 32px;
+	border: 1px solid ;
+    border-color: #CCC;
+    border-top-color: #777;
+    margin:  10px 10px 0 0;	
+}
+
+.search-by-name input[type='button'] {
+	background: #002c77;
+	padding: 8px 6px;
+	border: none;
+    box-shadow: 0 -2px 0 #00163C inset;
+    color: #fff;
+	border-radius: 2px;
+}
+
+.price-filter input {
+	color: #428bca;
+}
+
+.price-filter .ui-slider-range {
+	background: #777; 
+}
+
+.price-filter .ui-widget.ui-widget-content {
+	background: #ccc; 
+}
+
+.price-filter .ui-state-active {
+	background: #fff; 
+}
+
+.price-filter #slider-range {
+	margin: 16px 0; 
+}
+
+.price-filter #slider-range span {
+	height: 24px;
+    border-radius: 24px;
+    width: 12px;
+    top: -7px;
+}
+
+.price-a {
+	float: right;
+	display: block;
+	color: #777;
+}
+
+.price-b {
+	display: block;
+	float: left;
+	color: #777;
+}
+
+.stars-filter ul {
+	margin-top: 20px;
+}
+
+.stars-filter ul li {
+	font-size: 12px;
+	padding: 4px 0;
+}
+
+.stars-filter ul li .glyphicon-star {
+	color: #fdba12;
+	margin-left: 4px;
+	vertical-align: 2px;
+}
+
+.stars-filter ul li .number {
+	color: #444;
+	margin-left: 8px;
+}
+
+.stars-filter ul li.all {
+	color: #444;
+	font-weight: bold;
+}
+
+.stars-filter ul li input[type='checkbox'] {
+}
+
+.hotel-info {
+	background: #fff;
+	padding: 6px;
+	box-shadow: 0px 1px 3px 0px rgba(119, 119, 199, 0.3);
+	margin-bottom: 10px;
+}
+
+.carrousel {
+	float: left;
+	width: 26%;
+}
+
+.carrousel img {
+	width: 100%;
+	min-height: 175px;
+}
+
+.container-info {
+	float: left;
+	padding: 4px 0 0 16px;
+	width: 49%;
+}
+.container-info h3 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+.container-info p {
+	margin-bottom: 12px;
+}
+
+.container-info .glyphicon-star {
+	color: #fdba12;
+	margin-right: 4px;
+}
+
+.container-info .meal-plan {
+	color: #DF6800;
+}
+
+.container-info .meal-plan span {
+	font-size: 13px;
+	margin-right: 4px;
+}
+
+.container-info .amenity {
+	display: inline-block;
+	margin-right: 10px;
+	color: #444;
+}
+
+.price-info {
+	float: left;
+	width: 25%;
+	text-align: center;
+	border-left: 1px dashed #ccc;
+	min-height: 166px;
+}
+
+.price-info .price-description {
+	font-size: 12px;
+	padding: 2px 0 12px;
+}
+
+.price-info .price-currency {
+	font-size: 24px;
+	color: #DF6800;
+	vertical-align: 4px;
+}
+
+.price-info .price-amount {
+	font-size: 36px;
+	color: #DF6800;
+}
+
+.price-info .taxes {
+	font-size: 12px;
+	padding-bottom: 8px;
+}
+
+.price-info .see-hotel {
+	background: #002c77;
+	box-shadow: 0 -2px 0 #00163C inset;
+	padding: 10px 0;
+	margin: 0 20px 8px;
+	display: block;
+	border-radius: 4px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.price-info .payment-type {
+	padding-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/* responsive */
+
+
+@media screen and (min-width: 240px) and (max-width: 1100px) {
+	.sidebar {
+	    width: 100%;
+	    float: inherit; 
+	    margin-top: 0;
+	}
+
+	.sidebar .filtros h4 {
+		display: none;
+	}
+
+	.sidebar .filtros .link-filtro .arrow-blue,
+	.sidebar .filtros .link-filtro {
+		display: block;
+	}
+
+	.sidebar .filtros *:not(.link-filtro) {
+		display: none;
+	}
+
+	.sidebar .filtros .link-filtro {
+		width: 62px;
+	    margin: 0 auto;
+	    font-size: 14px;
+	}
+
+	.edit-search .arrow-blue {
+		display: block;
+	}
+
+	.main-content {
+		width: 100%;
+		float: none; 
+	}
+	
+	.main-content .short {
+		text-align: center;
+		margin: 15px 0; 
+	}
+
+	.sidebar .mapa a {
+		background: none;
+	}
+
+	.mapa img {
+		display: none;
+	}
+
+	.breadcrumb {
+		display: none;
+	}
+
+	.search-options {
+		border: none; 
+	}
+
+	.search-options *:not(a) {
+		display: none;
+	}
+
+	.search-options .edit-search {
+		float: inherit;
+		font-size: 14px; 
+		display: block;
+		position: relative;
+		width: 146px;
+		margin: 0 auto;
+	}
+
+	.content-head {
+		border-bottom: 1px solid #ccc;
+	}
+
+	.mapa {
+		border-bottom: 1px solid #ccc;
+		padding: 7px 0;
+	}
+
+	.filtros {
+		border-bottom: 1px solid #ccc;
+		padding: 15px 0;
+	}
+
+}
+
+@media screen and (min-width: 240px) and (max-width: 789px) {
+	.price-info,
+	.container-info,
+	.carrousel{
+		width: 100%;
+		float: none;
+	}
+
+	.price-info {
+		border-left: none;
+	    border-top: 1px dashed #ccc;
+	    padding-top: 15px;
+	    margin-top: 15px;
+	}
+
+	.container-info {
+		padding-left: 0;
+	}
+
+}
+
+
+
+
+

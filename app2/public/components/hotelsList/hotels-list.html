@@ -1,0 +1,161 @@
+<div class="content-head">
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Hoteles</a></li>
+        <li>Madrid</li>
+    </ul>
+    <div class="search-options clearfix">
+        <h4>Hoteles disponibles para:</h4>
+        <ul>
+            <li><span class="glyphicon glyphicon-map-marker"></span> madrid</li>
+            <li><span class="glyphicon glyphicon-calendar"></span> 16/11/2016</li>
+            <li><span class="glyphicon glyphicon-calendar"></span> 30/11/2016</li>
+            <li><span class="glyphicon glyphicon-user"></span> 2 huéspedes</li>
+        </ul>
+        <a class="edit-search" href="#">Modificar búsqueda <span class="arrow-blue bottom"></span></a>
+    </div>
+</div>
+<aside class="sidebar">
+    <div class="mapa clearfix">
+        <img alt="mapa" src="public/static/images/mapa.jpg" />
+        <a href="#">Ver hoteles en el mapa</a>
+    </div>
+    <div class="filtros">
+        <a class="link-filtro" href="#">Filtros <span class="arrow-blue bottom"></span></a>
+        <h4 class="filter-title">Filtrar</h4>
+        <div class="search-by-name box clearfix">
+            <a href="#">
+                <span class="glyphicon glyphicon-search"></span>
+                Nombre de hotel 
+                <span class="arrow-blue"></span>
+            </a>
+            <input type="text" name="nombre" />
+            <input type="button" name="buscarHotel" value="Acepta">
+        </div>
+        <div class="price-filter box">
+            <a href="#">$ Precio por noche <span class="arrow-blue"></span></a>
+            <div id="slider-range"></div>
+            <div class="price-range clearfix">
+                <span class="price-a"></span>
+                <span class="price-b"></span>
+            </div>
+        </div>
+        <div class="stars-filter box">
+            <a href="#">
+                <span class="glyphicon glyphicon-star"></span>
+                Estrellas
+                <span class="arrow-blue"></span>
+            </a>
+            <ul>
+                <li class="all">
+                    <label>
+                        <input type="checkbox" name="">
+                        Todas las estrellas (284)
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span> 
+                        <span class="number">(25)</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span> 
+                        <span class="number">(128)</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="number">(93)</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span> 
+                        <span class="number">(31)</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <span class="glyphicon glyphicon-star"></span> 
+                        <span class="number">(7)</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
+<div class="main-content">
+    <div class="short">
+        <label>Ordenar</label>
+        <select>
+            <option>Más relevantes</option>
+            <option>Precio más bajo</option>
+            <option>Precio más alto</option>
+            <option>Menos estrellas</option>
+            <option>Más estrellas</option>
+        </select>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center" ng-show="!hotels.length">
+            <div class="alert alert-info">No hay hoteles para mostrar.</div>
+        </div>
+        <section class="col-md-12" ng-show="hotels.length">
+            <article class="hotel-info clearfix" ng-repeat="hotel in hotels" itemscope itemtype="http://schema.org/Hotel">
+                <div class="carrousel">
+                    <img itemprop="image" src="{{hotel.gallery[0]}}" />
+                </div>
+                <div class="container-info">
+                    <h3>{{ hotel.name}}</h3>
+                    <p>
+                        <span ng-repeat="n in range(1,hotel.stars)" class="glyphicon glyphicon-star"></span>
+                    </p>
+                    <p class="meal-plan"><span class="glyphicon glyphicon-home"></span>{{hotel.mealPlan}}</p>
+                    <ul>
+                        <li class="amenity" ng-repeat="amenity in hotel.amenities">
+                            <div ng-switch="amenity">
+                                <span title="{{amenity}}" ng-switch-when="business" class="glyphicon glyphicon-user"></span>
+                                <span title="{{amenity}}" ng-switch-when="pool" class="glyphicon glyphicon-flag"></span>
+                                <span title="{{amenity}}" ng-switch-when="checkin" class="glyphicon glyphicon-check"></span>
+                                <span title="{{amenity}}" ng-switch-when="bar" class="glyphicon glyphicon-glass"></span>
+                                <span title="{{amenity}}" ng-switch-when="gym" class="glyphicon glyphicon-heart"></span>
+                                <span title="{{amenity}}" ng-switch-when="cleaning" class="glyphicon glyphicon-trash"></span>
+                                <span title="{{amenity}}" ng-switch-when="wifi" class="glyphicon glyphicon-signal"></span>
+                                <span title="{{amenity}}" ng-switch-when="tv" class="glyphicon glyphicon-facetime-video"></span>
+                                <span title="{{amenity}}" ng-switch-when="coffee" class="glyphicon glyphicon-cutlery"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="price-info">
+                    <p class="price-description">Precio por noche por habitación</p>
+                    <p>
+                        <span class="price-currency">{{hotel.price.currency}}</span>
+                        <span class="price-amount">{{ hotel.price.amountWithDiscount? hotel.price.amountWithDiscount: hotel.price.amount}}</span>
+                    </p>
+                    <p class="taxes" ng-show="hotel.price.taxes">Impuestos y tasas no incluidos</p>
+                    <a class="see-hotel" href="#">Ver hotel</a>
+                    <p class="payment-type" ng-repeat="payment in hotel.paymentType">{{payment}}</p>
+
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
