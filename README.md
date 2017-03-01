@@ -25,3 +25,5 @@ En caso de no tener instalado mongo se puede descomentar las lineas 41-45 del ar
 public/components/hotelsList/HotelsListController.js y comentar las lineas 32-38
 
 y descomentar de la linea 25-31 del archivo index.js y comentar la lineas 8-21
+
+index de la aplicacion localhost:3030
