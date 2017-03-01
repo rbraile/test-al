@@ -8,6 +8,8 @@ despues de que termine de installar
 la aplicación necesita una base de datos mongo
 en el archivo config.js esta la configuracion del puerto y la base de datos
 Importar los datos del archivo hotels.json
+Ubicado en la carpeta raiz desde la consola ejecutar 
+mongoimport -d hotels -c hotels hotels.json
 
 
 --- NO BASE DE DATOS MONGO ---
