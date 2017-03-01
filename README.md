@@ -10,6 +10,8 @@ en el archivo config.js esta la configuracion del puerto y la base de datos
 Importar los datos del archivo hotels.json
 Ubicado en la carpeta raiz (app2) desde la consola ejecutar 
 <br /><strong>mongoimport -d hotels -c hotels hotels.json</strong>
+el archivo de configuracion de la conexion a mongodb esta en el archivo
+<br />ubicado en la carpeta raiz (app2) <strong>config.js</strong>
 
 correr en la cosola 
 	<br /><strong>npm install</strong>
