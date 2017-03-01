@@ -14,10 +14,10 @@ el archivo de configuracion de la conexion a mongodb esta en el archivo
 <br />ubicado en la carpeta raiz (app2) <strong>config.js</strong>
 
 correr en la cosola 
-	<br /><strong>npm install</strong>
+	<br /><strong>$ npm install</strong>
 
 despues de que termine de installar 
-	<br /><strong>npm install</strong>
+	<br /><strong>$ npm install</strong>
 
 --- NO BASE DE DATOS MONGO ---
 
