@@ -1,5 +1,10 @@
 aplicación MEAN
 
+Requerimientos para poder correr la aplicación
+<br />- nodejs
+<br />- npm
+<br />- mongodb(este se puede obviar comentando algunas lineas y descomentando otras);
+
 la aplicación necesita una base de datos mongo
 en el archivo config.js esta la configuracion del puerto y la base de datos
 Importar los datos del archivo hotels.json
